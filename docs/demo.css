@@ -28,6 +28,7 @@ div.green-band {
 div.brown-band {
     height: 40px;
     background-color: #825432;
+    display: flex;
     justify-content: space-between;
     padding-left: 2em;
     padding-right: 2em;
@@ -43,8 +44,10 @@ div.brown-band> h2 {
 div.brown-band> img {
     width: 20px;
     height: 20px;
-    margin-left: 2em;
-    margin-right: 2em; 
+    margin-left: 1em;
+    margin-right: 1em; 
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
 }
 
 div.page-title {
