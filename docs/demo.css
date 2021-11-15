@@ -13,37 +13,42 @@ h2 {
     margin-left: 20px;
   }
 
-div.green-band {
+div {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+header.green-band {
     height: 25px;
     background-color: #00AA00;
     display: flex;
     justify-content: space-between;
 }
 
-div.brown-band {
+header.brown-band {
     height: 40px;
     background-color: #825432;
     display: flex;
     justify-content: space-between;
 }
-div.brown-band> h2 {
+header.brown-band> h2 {
     color: white;
     font-size: 30px;
     margin: 0;
     align-self: flex-end; /* put it at the bottom */
 }
-div.brown-band> img {
+header.brown-band> img {
     width: 20px;
     height: 20px;
 }
 
-div.page-title {
+header.page-title {
     height: 100px;
     background-color: #555555;
     display: flex;
     justify-content: space-between;
 }
-div.page-title> h1 {
+header.page-title> h1 {
     color: #55FFFF;
     font-size: 60px;
     font-family: 'Aldrich';
@@ -52,10 +57,14 @@ div.page-title> h1 {
     line-height: 1000px;   
     padding: auto;
 }
-div.page-title> img {
+header.page-title> img {
     width: 40px;
     height: 40px;
     padding: auto;
+}
+
+footer {
+    background-color: #00AA00;
 }
 
 ul { 
