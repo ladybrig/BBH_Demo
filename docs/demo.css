@@ -30,14 +30,16 @@ div.brown-band {
     background-color: #825432;
     display: flex;
     justify-content: space-between;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 div.brown-band> h2 {
-    color: #dbd3af;
-    font-size: 30px;
-    font-family: 'Aldrich';
     text-align: center;
     padding: auto;
-    text-shadow: 2px 2px #29292996;
+    font-size: 30px;
+    font-family: 'Aldrich';
+    color: #dbd3af;
+    text-shadow: 3px 2px #29292996;
 }
 div.brown-band> img {
     width: 20px;
@@ -45,28 +47,25 @@ div.brown-band> img {
 }
 
 div.page-title {
-    height: 100px;
+    height: 150px;
     background-color: #2b2b2b;
     display: flex;
     justify-content: space-between;
     padding: 2em;
 }
 div.page-title> h1 {
-    height: 100px;
-    vertical-align: middle;
-    color: #55FFFF;
-    font-size: 60px;
-    font-family: 'Aldrich';
     text-align: center;
     padding: auto;
-    text-shadow: 2px 2px #c2c1c196;
+    font-size: 60px;
+    font-family: 'Aldrich';
+    color: #55FFFF;
+    text-shadow: 3px 2px #c2c1c196;
 }
 div.page-title> img {
-    width: 50px;
-    height: 50px;
-    vertical-align: middle;
-    margin-left: 3em;
-    margin-right: 3em; 
+    width: 70px;
+    height: 70px;
+    margin-left: 4em;
+    margin-right: 4em; 
 }
 
 footer {
