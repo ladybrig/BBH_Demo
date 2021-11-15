@@ -13,54 +13,58 @@ h2 {
     margin-left: 20px;
   }
 
-div {
+/* div {
     padding-left: 2em;
     padding-right: 2em;
-}
+} */
 
-header.green-band {
+div.green-band {
     height: 25px;
     background-color: #00AA00;
     display: flex;
     justify-content: space-between;
 }
 
-header.brown-band {
+div.brown-band {
     height: 40px;
     background-color: #825432;
     display: flex;
     justify-content: space-between;
 }
-header.brown-band> h2 {
+div.brown-band> h2 {
     color: white;
     font-size: 30px;
     margin: 0;
     align-self: flex-end; /* put it at the bottom */
 }
-header.brown-band> img {
+div.brown-band> img {
     width: 20px;
     height: 20px;
 }
 
-header.page-title {
+div.page-title {
     height: 100px;
-    background-color: #555555;
+    background-color: #2b2b2b;
     display: flex;
     justify-content: space-between;
+    padding: 2em;
 }
-header.page-title> h1 {
+div.page-title> h1 {
     color: #55FFFF;
     font-size: 60px;
     font-family: 'Aldrich';
     text-align: center;
     vertical-align: middle;
-    line-height: 1000px;   
+    line-height: 100px;   
     padding: auto;
+    text-shadow: 2px 2px #c2c1c196;
 }
-header.page-title> img {
+div.page-title> img {
     width: 40px;
     height: 40px;
-    padding: auto;
+    vertical-align: middle;
+    margin-left: 1em;
+    margin-right: 1em; 
 }
 
 footer {
