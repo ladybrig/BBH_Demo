@@ -13,37 +13,37 @@ h2 {
     margin-left: 20px;
   }
 
-.green-band>div {
+div.green-band {
     height: 25px;
     background-color: #00AA00;
     display: flex;
     justify-content: space-between;
 }
 
-.brown-band>div {
+div.brown-band {
     height: 40px;
     background-color: #825432;
     display: flex;
     justify-content: space-between;
 }
-.brown-band>div h2 {
+div.brown-band> h2 {
     color: white;
     font-size: 30px;
     margin: 0;
     align-self: flex-end; /* put it at the bottom */
 }
-.brown-band-header>div img {
+div.brown-band> img {
     width: 20px;
     height: 20px;
 }
 
-.page-title>div {
+div.page-title {
     height: 100px;
     background-color: #555555;
     display: flex;
     justify-content: space-between;
 }
-.page-title>div h1 {
+div.page-title> h1 {
     color: #55FFFF;
     font-size: 60px;
     font-family: 'Aldrich';
@@ -52,7 +52,7 @@ h2 {
     line-height: 1000px;   
     padding: auto;
 }
-.page-title>div img {
+div.page-title> img {
     width: 40px;
     height: 40px;
     padding: auto;
