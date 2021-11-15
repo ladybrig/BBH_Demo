@@ -1,6 +1,70 @@
+body {
+    background-color: black;
+    color: wheat;
+}
 
-ul { list-style-type: none;}
-ul li::before { list-style-image: url(/BBH_Demo/images/emoji.ico); }
+h1 {
+    color: #FFAA00;
+    margin-left: 20px;
+  }
+
+h2 {
+    color: #AAAAAA;
+    margin-left: 20px;
+  }
+
+.green-band>div {
+    height: 25px;
+    background-color: #00AA00;
+    display: flex;
+    justify-content: space-between;
+}
+
+.brown-band>div {
+    height: 40px;
+    background-color: #825432;
+    display: flex;
+    justify-content: space-between;
+}
+.brown-band>div h2 {
+    color: white;
+    font-size: 30px;
+    margin: 0;
+    align-self: flex-end; /* put it at the bottom */
+}
+.brown-band-header>div img {
+    width: 20px;
+    height: 20px;
+}
+
+.page-title>div {
+    height: 100px;
+    background-color: #555555;
+    display: flex;
+    justify-content: space-between;
+}
+.page-title>div h1 {
+    color: #55FFFF;
+    font-size: 60px;
+    font-family: 'Aldrich';
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1000px;   
+    padding: auto;
+}
+.page-title>div img {
+    width: 40px;
+    height: 40px;
+    padding: auto;
+}
+
+ul { 
+    list-style-type: none;    
+    padding-left: 2em;
+}
+ul li::before { 
+    list-style-image: url(/BBH_Demo/images/emoji.ico); 
+}
 
 .ico {
     width: 20px;
