@@ -3,10 +3,14 @@ ul { list-style-type: none;}
 ul li::before { list-style-image: url(../images/emoji.ico); }
 
 .ico {
-    width: 100px;
-    height: 100px;
+    width: 20px;
+    height: 20px;
 }
 .tiny-ico{
-    width: 25px;
-    height: 25px;
+    width: 10px;
+    height: 10px;
+}
+.logo {
+    width: 50px;
+    height: 50px;
 }
