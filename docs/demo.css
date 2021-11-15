@@ -13,16 +13,16 @@ h2 {
     margin-left: 20px;
   }
 
- /* div {
-    padding-left: 2em;
-    padding-right: 2em;
-}  */
 
 div.green-band {
     height: 25px;
     background-color: #00AA00;
     display: flex;
     justify-content: space-between;
+}
+div.green-band> img {
+    height: 20px;
+    align-items: center;
 }
 
 div.brown-band {
