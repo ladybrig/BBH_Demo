@@ -13,17 +13,16 @@ h2 {
     margin-left: 20px;
   }
 
- div {
+ /* div {
     padding-left: 2em;
     padding-right: 2em;
-} 
+}  */
 
 div.green-band {
     height: 25px;
     background-color: #00AA00;
     display: flex;
     justify-content: space-between;
-    margin
 }
 
 div.brown-band {
@@ -33,22 +32,16 @@ div.brown-band {
     justify-content: space-between;
 }
 div.brown-band> h2 {
-    color: white;
-    font-size: 30px;
-    margin: 0;
-    align-self: flex-end; /* put it at the bottom */
-}
-div.brown-band> img {
-    width: 20px;
-    height: 20px;
-}
-div.brown-band> h2 {
-    color: #AAAAAA;
+    color: #dbd3af;
     font-size: 30px;
     font-family: 'Aldrich';
     text-align: center;
     padding: auto;
     text-shadow: 2px 2px #29292996;
+}
+div.brown-band> img {
+    width: 20px;
+    height: 20px;
 }
 
 div.page-title {
@@ -59,6 +52,8 @@ div.page-title {
     padding: 2em;
 }
 div.page-title> h1 {
+    height: 100px;
+    vertical-align: middle;
     color: #55FFFF;
     font-size: 60px;
     font-family: 'Aldrich';
@@ -67,11 +62,11 @@ div.page-title> h1 {
     text-shadow: 2px 2px #c2c1c196;
 }
 div.page-title> img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     vertical-align: middle;
-    margin-left: 2em;
-    margin-right: 2em; 
+    margin-left: 3em;
+    margin-right: 3em; 
 }
 
 footer {
