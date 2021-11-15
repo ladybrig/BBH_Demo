@@ -1,2 +1,2 @@
 ul { list-style-type: none;}
-ul li::before { list-style-image: url(../images/emoji.svg); }
+ul li::before { list-style-image: url(../images/emoji.ico); }
