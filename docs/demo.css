@@ -61,13 +61,14 @@ div.page-title {
     display: flex;
 }
 
-div.container {
+div.container-lg {
     background-color: #2b2b2b;
+    border-color: black;
     display: flex; 
     justify-content: space-between;
 }
 
-div.page-title> div.container> h1 {
+div.page-title> div.container-lg> h1 {
     text-align: center;
     padding: auto;
     font-size: 60px;
@@ -75,7 +76,7 @@ div.page-title> div.container> h1 {
     color: #55FFFF;
     text-shadow: 3px 2px #c2c1c196;
 }
-div.page-title>  div.container> img {
+div.page-title>  div.container-lg> img {
     width: 70px;
     height: 70px;
     margin-left: 2em;
