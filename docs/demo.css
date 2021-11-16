@@ -18,6 +18,7 @@ div.green-band {
     height: 25px;
     background-color: #00AA00;
     background-image: url('/BBH_Demo/images/mcdirt.jpg');
+    background-size: 100px 100px;
     display: flex;
     justify-content: space-between;
 }
@@ -30,6 +31,7 @@ div.brown-band {
     height: 40px;
     background-color: #825432;
     background-image: url('/BBH_Demo/images/minecraft_dirt.jpg');
+    background-size: 100px 100px;
     display: flex;
     justify-content: space-between;
     padding-left: 2em;
@@ -52,19 +54,20 @@ div.brown-band> img {
     margin-bottom: 0.75em;
 }
 
-div.container {
-    padding: 2em;
-    background-color: #2b2b2b;
-}
-
 div.page-title {
     height: 150px;
     background-image: url('/BBH_Demo/images/minecraft_brick.jpg');
+    background-size: 100px 100px;
     display: flex;
-    justify-content: space-between;
-    padding: 2em;
 }
-div.page-title> h1 {
+
+div.container {
+    background-color: #2b2b2b;
+    display: flex; 
+    justify-content: space-between;
+}
+
+div.page-title> div.container> h1 {
     text-align: center;
     padding: auto;
     font-size: 60px;
@@ -72,11 +75,11 @@ div.page-title> h1 {
     color: #55FFFF;
     text-shadow: 3px 2px #c2c1c196;
 }
-div.page-title> img {
+div.page-title>  div.container> img {
     width: 70px;
     height: 70px;
-    margin-left: 4em;
-    margin-right: 4em; 
+    margin-left: 2em;
+    margin-right: 2em; 
 }
 
 footer {
