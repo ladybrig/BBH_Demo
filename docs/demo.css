@@ -17,6 +17,7 @@ h2 {
 div.green-band {
     height: 25px;
     background-color: #00AA00;
+    background-image: url('/BBH_Demo/images/mcdirt.jpg');
     display: flex;
     justify-content: space-between;
 }
@@ -28,6 +29,7 @@ div.green-band> img {
 div.brown-band {
     height: 40px;
     background-color: #825432;
+    background-image: url('/BBH_Demo/images/minecraft_dirt.jpg');
     display: flex;
     justify-content: space-between;
     padding-left: 2em;
@@ -48,6 +50,11 @@ div.brown-band> img {
     margin-right: 1em; 
     margin-top: 0.75em;
     margin-bottom: 0.75em;
+}
+
+div.container {
+    padding: 2em;
+    background-image: url('/BBH_Demo/images/minecraft_brick.jpg');
 }
 
 div.page-title {
