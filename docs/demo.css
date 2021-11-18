@@ -70,6 +70,7 @@ div.container-lg {
 
 div.page-title> div.container-lg> h1 {
     text-align: center;
+    align-self: center;
     padding: auto;
     font-size: 60px;
     font-family: 'Aldrich';
@@ -77,6 +78,7 @@ div.page-title> div.container-lg> h1 {
     text-shadow: 3px 2px #c2c1c196;
 }
 div.page-title>  div.container-lg> img {
+    align-self: center;
     width: 70px;
     height: 70px;
     margin-left: 2em;
