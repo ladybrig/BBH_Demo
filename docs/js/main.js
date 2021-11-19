@@ -58,7 +58,8 @@ $.get( ('/BBH_Demo/docs/world_image_list.txt') , function(data) {
 
 // Start the html section with the starter container div
 // Loop through each image
-$image_array.forEach( function($curr_url){
+for(var i = 0, len = ($image_array.length); i < len; i++) {
+//$image_array.forEach( function($curr_url){
     $curr_text = $curr_url.split(".")[1] + ".txt"
     console.log("Current text: "+$curr_text+" Current pic:"+$curr_url);
     // if the image # is even, pic is on the left and text is on the right
