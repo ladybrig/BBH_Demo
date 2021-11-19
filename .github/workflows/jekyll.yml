@@ -15,10 +15,13 @@ jobs:
     - uses: actions/checkout@v2
     - name: Create a text file containing a list of the world images
       run: |
-        find ./images/world_images -name \*.* -print | grep world_images > ./docs/world_image_list.txt |
-        git add . |
-        git commit -m "Update the world images list"
-        git push origin main
+        find ./images/world_images -name \*.* -print | grep world_images > ./docs/world_image_list.txt 
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: "[Bot] Add a new world image list file!"
+        commit_user_name: LadyBrig
+        commit_user_email: 63630848+ladybrig@users.noreply.github.com
+        commit_author: Tricia <63630848+ladybrig@users.noreply.github.com>
     - name: Build the site in the jekyll/builder container
       run: |
         docker run \
