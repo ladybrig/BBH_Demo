@@ -35,16 +35,25 @@ var i = 1;
 //      then loop through the subdirectories of world_images
 // get the images in /images/world_images
 
-$.ajax({
-    url : $img_folder,
-    success: function (data) {
-        $(data).find("a").attr("href", function (i, val) {
-            if( val.match(/\.(jpe?g|png|gif)$/) ) { 
-                $image_array.add( val.split("/")[-1] );
-            } 
-        });
+// $.ajax({
+//     url : $img_folder,
+//     success: function (data) {
+//         $(data).find("a").attr("href", function (i, val) {
+//             if( val.match(/\.(jpe?g|png|gif)$/) ) { 
+//                 $image_array.add( val.split("/")[-1] );
+//             } 
+//         });
+//     }
+// });
+
+$.get( ('/BBH_demo/docs/world_image_list.txt') , function(data) {
+    var $lines = data.split("\n");
+    for (var i = 0, len = lines.length; i < len; i++) {
+        if( $lines[i].match(/\.(jpe?g|png|gif)$/) ) { 
+            $image_array.add( $lines[i].split("/")[-1] );
+        } 
     }
-});
+ }, 'text');
 
 // Start the html section with the starter container div
 // Loop through each image

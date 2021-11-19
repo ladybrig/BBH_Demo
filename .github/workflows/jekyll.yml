@@ -18,3 +18,6 @@ jobs:
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+    - name: Create a text file containing a list of the world images
+      run: |
+        find ./images/world_images -name \*.* -print | grep world_images > ./docs/world_image_list.txt
