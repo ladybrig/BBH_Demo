@@ -48,12 +48,13 @@ var i = 1;
 
 $.get( ('/BBH_Demo/docs/world_image_list.txt') , function(data) {
     var $lines = data.split("\n");
-    for (var i = 0, len = $lines.length; i < len; i++) {
-        if( $lines[i].match(/\.(jpe?g|png|gif)$/) ) { 
-            $image_array.add( $lines[i].split("/")[-1] );
-        } 
-    }
  }, 'text');
+ 
+ for (var i = 0, len = $lines.length; i < len; i++) {
+    if( $lines[i].match(/\.(jpe?g|png|gif)$/) ) { 
+        $image_array.add( $lines[i].split("/")[-1] );
+    } 
+}
 
 // Start the html section with the starter container div
 // Loop through each image
