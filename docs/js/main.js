@@ -71,7 +71,7 @@ for(var i = 0, len = ($image_array.length); i < len; i++) {
         //create html divs to hold the text and the image
         $html_string = $html_string + imageDiv($curr_url, $curr_text, false);
     }
-})
+}//)
 // end the html section with a </div>
 $html_string = $html_string + "</div>"
 // append the html inside the div whose class="content"
