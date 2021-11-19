@@ -52,10 +52,8 @@ $.get( ('/BBH_Demo/docs/world_image_list.txt') , function(data) {
  }, 'text');
  
  for (var i = 0, len = ($lines.length); i < len; i++) {
-    if( $lines[i].match(/\.(jpe?g|png|gif)$/) ) { 
-        var $line_split = $lines[i].split("/");
-        $image_array.push( $line_split[($line_split.length)-1] );
-    } 
+    var $line_split = $lines[i].split("/");
+    $image_array.push( $line_split[($line_split.length)-1] );
 }
 
 // Start the html section with the starter container div
