@@ -48,7 +48,7 @@ var i = 1;
 
 $.get( ('/BBH_Demo/docs/world_image_list.txt') , function(data) {
     var $lines = data.split("\n");
-    for (var i = 0, len = lines.length; i < len; i++) {
+    for (var i = 0, len = $lines.length; i < len; i++) {
         if( $lines[i].match(/\.(jpe?g|png|gif)$/) ) { 
             $image_array.add( $lines[i].split("/")[-1] );
         } 
