@@ -50,7 +50,7 @@ $.ajax({
 
 // Start the html section with the starter container div
 // Loop through each image
-foreach( $curr_url in $image_array ){
+$image_array.each( function($curr_url){
     $curr_text = $curr_url.split(".")[1] + ".txt"
     // if the image # is even, pic is on the left and text is on the right
     if($i % 2 == 0){
@@ -61,6 +61,7 @@ foreach( $curr_url in $image_array ){
         //create html divs to hold the text and the image
         $html_string = $html_string + imageDiv($curr_url, $curr_text, false);
     }
+})
 // end the html section with a </div>
 $html_string = $html_string + "</div>"
 // append the html inside the div whose class="content"
