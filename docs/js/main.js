@@ -27,7 +27,7 @@ function imageDiv( $image_url, $text_url, $even ){
 
 /*** initialize variables ***/
 var $html_string = "";
-var $img_folder = "BBH_Demo/images/world_images/";
+var $img_folder = "/images/world_images/";
 var $image_array = new Array();
 var i = 1;
 
