@@ -15,7 +15,10 @@ jobs:
     - uses: actions/checkout@v2
     - name: Create a text file containing a list of the world images
       run: |
-        find ./images/world_images -name \*.* -print | grep world_images > ./docs/world_image_list.txt
+        find ./images/world_images -name \*.* -print | grep world_images > ./docs/world_image_list.txt |
+        git add . |
+        git commit -m "Update the world images list"
+        git push origin main
     - name: Build the site in the jekyll/builder container
       run: |
         docker run \
