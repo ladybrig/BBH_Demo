@@ -28,7 +28,7 @@ function imageDiv( $image_url, $text_url, $even ){
 /*** initialize variables ***/
 var $html_string = "";
 var $img_folder = "/BBH_Demo/images/world_images/";
-var $image_array = [];
+var $image_array = new Array();
 var i = 1;
 
 // ToDo: if we have more than one world to work through, we can create subdirectories for each world, 
