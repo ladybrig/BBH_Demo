@@ -30,6 +30,7 @@ var $html_string = "";
 var $img_folder = "/BBH_Demo/images/world_images/";
 var $image_array = new Array();
 var i = 1;
+var $lines = new Array();
 
 // ToDo: if we have more than one world to work through, we can create subdirectories for each world, 
 //      then loop through the subdirectories of world_images
@@ -47,7 +48,7 @@ var i = 1;
 // });
 
 $.get( ('/BBH_Demo/docs/world_image_list.txt') , function(data) {
-    var $lines = data.split("\n");
+    $lines = data.split("\n");
  }, 'text');
  
  for (var i = 0, len = $lines.length; i < len; i++) {
