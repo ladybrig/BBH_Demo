@@ -59,7 +59,7 @@ $.get( ('/BBH_Demo/docs/world_image_list.txt') , function(data) {
 
 // Start the html section with the starter container div
 // Loop through each image
-$image_array.each( function($curr_url){
+$image_array.forEach( function($curr_url){
     $curr_text = $curr_url.split(".")[1] + ".txt"
     // if the image # is even, pic is on the left and text is on the right
     if($i % 2 == 0){
