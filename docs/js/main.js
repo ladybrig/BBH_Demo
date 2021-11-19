@@ -3,8 +3,7 @@
  *    The function of this file is to dynamically create HTML content based on the images in the images/world_images folder
  *          and text files with the same name in the doc/image_text folder
 *************************************/
-// Import libraries - JQuery 
-<script src="/BBH_demo/js/jquery.js"></script>
+
 /******** functions ********/
 // function to create an HTML div section for an image and text
 function imageDiv( $image_url, $text_url, $even ){
