@@ -9,7 +9,7 @@
 function imageDiv( $image_url, $text_url, $even ){
     var $image_html = "<div>";
     var $text = "";
-    $.get( ('/BBH_demo/docs/world_images'+$text_url) , function(data) {
+    $.get( ('/BBH_Demo/docs/world_images'+$text_url) , function(data) {
         $text = data;
      }, 'text');
     if( $even ){
@@ -46,7 +46,7 @@ var i = 1;
 //     }
 // });
 
-$.get( ('/BBH_demo/docs/world_image_list.txt') , function(data) {
+$.get( ('/BBH_Demo/docs/world_image_list.txt') , function(data) {
     var $lines = data.split("\n");
     for (var i = 0, len = lines.length; i < len; i++) {
         if( $lines[i].match(/\.(jpe?g|png|gif)$/) ) { 
