@@ -26,7 +26,7 @@ function imageDiv( $image_url, $text_url, $even ){
 /******** main code ********/
 
 /*** initialize variables ***/
-var $html_string = "";
+var $html_string = "<div>";
 var $img_folder = "/BBH_Demo/images/world_images/";
 var $image_array = new Array();
 var i = 1;
@@ -63,14 +63,27 @@ for(var i = 0, len = ($image_array.length); i < len; i++) {
     $curr_text = $curr_url.split(".")[1] + ".txt"
     console.log("Current text: "+$curr_text+" Current pic:"+$curr_url);
     // if the image # is even, pic is on the left and text is on the right
-    if($i % 2 == 0){
-        //create html divs to hold the text and the image
-        $html_string = $html_string + imageDiv($curr_url, $curr_text, true);
-    // else: pic is on the right and text is on the left
-    }else{
-        //create html divs to hold the text and the image
-        $html_string = $html_string + imageDiv($curr_url, $curr_text, false);
+    // if($i % 2 == 0){
+    //     //create html divs to hold the text and the image
+    //     $html_string = $html_string + imageDiv($curr_url, $curr_text, true);
+    // // else: pic is on the right and text is on the left
+    // }else{
+    //     //create html divs to hold the text and the image
+    //     $html_string = $html_string + imageDiv($curr_url, $curr_text, false);
+    // }
+    var $image_html = "<div>";
+    var $text = "";
+    $.get( ('/BBH_Demo/docs/world_images'+$curr_text) , function(data) {
+        $text = data;
+     }, 'text');
+    if( $i % 2 == 0 ){
+        $image_html = $image_html + '<div class=world_image><img src="/BBH_Demo/images/world_images/'+$curr_url+'"></div>';
+        $image_html = $image_html + '<div class="image_text">'+$text+'</div>';
+    } else {
+        $image_html = $image_html + '<div class="image_text">'+$text+'</div>';
+        $image_html = $image_html + '<div class=world_image><img src="/BBH_Demo/images/world_images/'+$curr_url+'"></div>';
     }
+    $image_html = $image_html + "</div>";
 }//)
 // end the html section with a </div>
 $html_string = $html_string + "</div>"
