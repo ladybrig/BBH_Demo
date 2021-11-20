@@ -89,13 +89,18 @@ for(var j = 0, len = ($image_array.length); j < len; j++) {
                 $image_html += '<div class=world_image><img src="/BBH_Demo/images/world_images/'+$curr_image+'"></div>';
             }
             $html_string = $image_html + "</div>";
+            $image_html += "</div>";
+            var $curr_html = $("#main_content").html( );
+            $("#main_content").html( $curr_html + $html_string );
          }, 'text');
     } catch {
         $image_html += '<div class=world_image><img src="/BBH_Demo/images/world_images/'+$curr_image+'"></div>';
-        $html_string = $image_html + "</div>";
+        $image_html += "</div>";
+        var $curr_html = $("#main_content").html( );
+        $("#main_content").html( $curr_html + $html_string );
     }    
 }//)
-// end the html section with a </div>
-$html_string = $html_string + "</div>"
-// append the html inside the div whose class="content"
-$("#main_content").html( $html_string );
+// // end the html section with a </div>
+// $html_string = $html_string + "</div>"
+// // append the html inside the div whose class="content"
+// $("#main_content").html( $html_string );
