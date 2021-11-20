@@ -4,6 +4,10 @@ body {
     background-size: 100px 100px;
     color: wheat;
 }
+div{
+    display: flex;
+    overflow-wrap: normal;
+}
 
 h1 {
     color: #FFAA00;
