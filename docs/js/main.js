@@ -40,43 +40,43 @@ $.get( ('/BBH_Demo/docs/world_image_list.txt') , function(data) {
         if( $lines[i] != "" ){
             var $line_split = $lines[i].split("/");
             $image_array.push( $line_split[($line_split.length)-1] );
-            // Loop through each image
-            for(var j = 0, len = ($image_array.length); j < len; j++) {
-                //$image_array.forEach( function($curr_url){
-                    $curr_image = $image_array[j]
-                    $curr_text = $curr_image.split(".")[0] + ".txt"
-                    console.log("Current text: "+$curr_text+" Current pic:"+$curr_image);
-                    $image_html = "<div class='image-block'>";
-                    $text = "";
-                    var $curr_html = $("#main_content").html( );
-                    $.ajax({ type: "GET",   
-                        url: '/BBH_Demo/docs/world_images/'+$curr_text,   
-                        async: false,
-                        success : function(text)
-                        {
-                            // if the image # is even, pic is on the left and text is on the right
-                            if( i % 2 == 0 ){
-                                //create html divs to hold the text and the image
-                                $image_html += '<div class=world-image><img src="/BBH_Demo/images/world_images/'+$curr_image+'"></div>';
-                                $image_html += '<div class="image-text">'+$text+'</div>';
-                            //else: pic is on the right and text is on the left
-                            } else {
-                                //create html divs to hold the text and the image
-                                $image_html += '<div class="image-text">'+$text+'</div>';
-                                $image_html += '<div class=world-image><img src="/BBH_Demo/images/world_images/'+$curr_image+'"></div>';
-                            }
-                            $html_string = $image_html + "</div>";
-                            $image_html += "</div>";
-                            // Append the div content into the main_content section
-                            $("#main_content").html( $curr_html + $html_string );
-                        },
-                        error: function() {
-                            $image_html += '<div class=world-image-notext><img src="/BBH_Demo/images/world_images/'+$curr_image+'"></div>';
-                            $image_html += "</div>";
-                            $("#main_content").html( $curr_html + $html_string );
-                        }
-                    });
+        }
+    }
+    // Loop through each image
+    for(var j = 0, len = ($image_array.length); j < len; j++) {
+        //$image_array.forEach( function($curr_url){
+            $curr_image = $image_array[j]
+            $curr_text = $curr_image.split(".")[0] + ".txt"
+            console.log("Current text: "+$curr_text+" Current pic:"+$curr_image);
+            $image_html = "<div class='image-block'>";
+            $text = "";
+            var $curr_html = $("#main_content").html( );
+            $.ajax({ type: "GET",   
+                url: '/BBH_Demo/docs/world_images/'+$curr_text,   
+                async: false,
+                success : function(text)
+                {
+                    // if the image # is even, pic is on the left and text is on the right
+                    if( i % 2 == 0 ){
+                        //create html divs to hold the text and the image
+                        $image_html += '<div class=world-image><img src="/BBH_Demo/images/world_images/'+$curr_image+'"></div>';
+                        $image_html += '<div class="image-text">'+$text+'</div>';
+                    //else: pic is on the right and text is on the left
+                    } else {
+                        //create html divs to hold the text and the image
+                        $image_html += '<div class="image-text">'+$text+'</div>';
+                        $image_html += '<div class=world-image><img src="/BBH_Demo/images/world_images/'+$curr_image+'"></div>';
+                    }
+                    $html_string = $image_html + "</div>";
+                    $image_html += "</div>";
+                    // Append the div content into the main_content section
+                    $("#main_content").html( $curr_html + $html_string );
+                },
+                error: function() {
+                    $image_html += '<div class=world-image-notext><img src="/BBH_Demo/images/world_images/'+$curr_image+'"></div>';
+                    $image_html += "</div>";
+                    $("#main_content").html( $curr_html + $html_string );
                 }
-             }
+            });
         }
     }, 'text');
