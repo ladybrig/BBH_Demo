@@ -46,6 +46,8 @@ div.brown-band> div{
     margin-right: auto;
     margin-left: auto;
     display: flex;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 div.brown-band> div> h2 {
     text-align: center;
