@@ -97,30 +97,39 @@ section {
 }
 
 div.image-block {
-    width: 400px;
-    height: 400px;
-    text-align: center;
     align-self: center;
     display: flex;
     padding: 1em;
 }
 
 div.world-image {
-    width: 384px;
-    height: 205px;
+    width: 506px;
+    height: 270px;
     display: flex;
 }
 div.world-image > img {
-    width: 384px;
-    height: 205px;
+    width: 506px;
+    height: 270px;
+    align-self: center;
+}
+
+div.world-image-notext {
+    width: 1012px;
+    height: 541px;
+    display: flex;
+}
+div.world-image-notext > img {
+    width: 1012px;
+    height: 541px;
     align-self: center;
 }
 
 div.world-text {
+    width: 506px;
+    height: 270px;
     text-align: left;
     overflow-wrap: normal;
 }
-
 
 footer {
     background-color: #00AA00;

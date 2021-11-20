@@ -71,7 +71,7 @@ $.get( ('/BBH_Demo/docs/world_image_list.txt') , function(data) {
                             $("#main_content").html( $curr_html + $html_string );
                         },
                         error: function() {
-                            $image_html += '<div class=world-image><img src="/BBH_Demo/images/world_images/'+$curr_image+'"></div>';
+                            $image_html += '<div class=world-image-notext><img src="/BBH_Demo/images/world_images/'+$curr_image+'"></div>';
                             $image_html += "</div>";
                             $("#main_content").html( $curr_html + $html_string );
                         }
