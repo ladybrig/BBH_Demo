@@ -56,11 +56,11 @@ $.get( ('/BBH_Demo/docs/world_image_list.txt') , function(data) {
             $.ajax({ type: "GET",   
                 url: '/BBH_Demo/docs/world_images/'+$curr_text,   
                 async: false,
-                success : function(text)
+                success : function($text)
                 {
-                    console.log(text)
+                    console.log($text)
                     // if the image # is even, pic is on the left and text is on the right
-                    if( i % 2 == 0 ){
+                    if( j % 2 == 0 ){
                         //create html divs to hold the text and the image
                         $image_html += '<div class=world-image><img src="/BBH_Demo/images/world_images/'+$curr_image+'"></div>';
                         $image_html += '<div class="image-text">'+$text+'</div>';
