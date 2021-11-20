@@ -45,6 +45,7 @@ div.brown-band> div{
     max-width: 1012px;
     margin-right: auto;
     margin-left: auto;
+    display: flex;
 }
 div.brown-band> div> h2 {
     text-align: center;
