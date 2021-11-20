@@ -42,6 +42,7 @@ $.get( ('/BBH_Demo/docs/world_image_list.txt') , function(data) {
             $image_array.push( $line_split[($line_split.length)-1] );
         }
     }
+    $image_array = $image_array.sort()
     // Loop through each image
     for(var j = 0, len = ($image_array.length); j < len; j++) {
         //$image_array.forEach( function($curr_url){
@@ -70,12 +71,12 @@ $.get( ('/BBH_Demo/docs/world_image_list.txt') , function(data) {
                     $html_string = $image_html + "</div>";
                     $image_html += "</div>";
                     // Append the div content into the main_content section
-                    $("#main_content").html( $curr_html + $html_string );
+                    $("#main_content").html( $image_html + $html_string );
                 },
                 error: function() {
                     $image_html += '<div class=world-image-notext><img src="/BBH_Demo/images/world_images/'+$curr_image+'"></div>';
                     $image_html += "</div>";
-                    $("#main_content").html( $curr_html + $html_string );
+                    $("#main_content").html( $image_html + $html_string );
                 }
             });
         }
