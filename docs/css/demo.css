@@ -5,7 +5,6 @@ body {
     color: wheat;
 }
 div{
-    display: flex;
     overflow-wrap: normal;
 }
 
