@@ -51,8 +51,8 @@ div.brown-band> div> h2 {
     padding: auto;
     font-size: 30px;
     font-family: 'Aldrich';
-    color: #dbd3af;
-    text-shadow: 3px 2px #29292996;
+    color: #1fd0f8;
+    text-shadow: 1px 1px #24292e;
 }
 div.brown-band> div > img {
     width: 30px;
@@ -81,7 +81,7 @@ div.page-title> div.container-lg> h1 {
     padding: auto;
     font-size: 60px;
     font-family: 'Aldrich';
-    color: #55FFFF;
+    color: #55ffc0; 
     text-shadow: 3px 2px #c2c1c196;
 }
 div.page-title>  div.container-lg> img {
@@ -106,13 +106,13 @@ div.image-block {
 }
 
 div.world-image {
-    width: 350px;
-    height: 350px;
+    width: 384px;
+    height: 205px;
     display: flex;
 }
 div.world-image > img {
-    width: 960px;
-    height: 513px;
+    width: 384px;
+    height: 205px;
     align-self: center;
 }
 
