@@ -87,6 +87,10 @@ div.page-title>  div.container-lg> img {
     margin-right: 2em; 
 }
 
+section {
+    padding: 1em;
+}
+
 div.image-block {
     width: 400px;
     height: 400px;
