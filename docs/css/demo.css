@@ -41,7 +41,12 @@ div.brown-band {
     padding-left: 2em;
     padding-right: 2em;
 }
-div.brown-band> h2 {
+div.brown-band> div{
+    max-width: 1012px;
+    margin-right: auto;
+    margin-left: auto;
+}
+div.brown-band> div> h2 {
     text-align: center;
     padding: auto;
     font-size: 30px;
@@ -49,7 +54,7 @@ div.brown-band> h2 {
     color: #dbd3af;
     text-shadow: 3px 2px #29292996;
 }
-div.brown-band> img {
+div.brown-band> div > img {
     width: 30px;
     height: 30px;
     align-self: center; 
@@ -106,8 +111,8 @@ div.world-image {
     display: flex;
 }
 div.world-image > img {
-    width: 300px;
-    height: 300px;
+    width: 960px;
+    height: 513px;
     align-self: center;
 }
 

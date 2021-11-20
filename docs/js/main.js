@@ -79,4 +79,4 @@ $.get( ('/BBH_Demo/docs/world_image_list.txt') , function(data) {
                 }
              }
         }
-    }, text);
+    }, 'text');
