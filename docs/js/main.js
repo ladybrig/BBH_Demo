@@ -60,8 +60,8 @@ $.get( ('/BBH_Demo/docs/world_image_list.txt') , function(data) {
 // Loop through each image
 for(var i = 0, len = ($image_array.length); i < len; i++) {
 //$image_array.forEach( function($curr_url){
-    $curr_text = $curr_url.split(".")[1] + ".txt"
-    console.log("Current text: "+$curr_text+" Current pic:"+$curr_url);
+    $curr_text = $image_array[i].split(".")[0] + ".txt"
+    console.log("Current text: "+$curr_text+" Current pic:"+$image_array[i]);
     // if the image # is even, pic is on the left and text is on the right
     // if($i % 2 == 0){
     //     //create html divs to hold the text and the image
@@ -77,11 +77,11 @@ for(var i = 0, len = ($image_array.length); i < len; i++) {
         $text = data;
      }, 'text');
     if( $i % 2 == 0 ){
-        $image_html = $image_html + '<div class=world_image><img src="/BBH_Demo/images/world_images/'+$curr_url+'"></div>';
+        $image_html = $image_html + '<div class=world_image><img src="/BBH_Demo/images/world_images/'+$image_array[i]+'"></div>';
         $image_html = $image_html + '<div class="image_text">'+$text+'</div>';
     } else {
         $image_html = $image_html + '<div class="image_text">'+$text+'</div>';
-        $image_html = $image_html + '<div class=world_image><img src="/BBH_Demo/images/world_images/'+$curr_url+'"></div>';
+        $image_html = $image_html + '<div class=world_image><img src="/BBH_Demo/images/world_images/'+$image_array[i]+'"></div>';
     }
     $image_html = $image_html + "</div>";
 }//)
