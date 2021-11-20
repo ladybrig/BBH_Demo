@@ -1,6 +1,6 @@
 body {
     background-color: black;
-    background-image: url('/BBH_Demo/images/minecraft_tree.jpg');
+    background-image: url('/BBH_Demo/images/minecraft_cobble.jpg');
     background-size: 100px 100px;
     color: wheat;
 }
@@ -62,6 +62,7 @@ div.page-title {
 div.container-lg {
     background-color: #2b2b2b;
     border-color: black;
+    color: wheat;
     display: flex; 
     justify-content: space-between;
 }
