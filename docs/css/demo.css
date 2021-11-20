@@ -84,6 +84,32 @@ div.page-title>  div.container-lg> img {
     margin-right: 2em; 
 }
 
+div.image-block {
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    align-self: center;
+    display: flex;
+    padding: 1em;
+}
+
+div.world-image {
+    width: 350px;
+    height: 350px;
+    display: flex;
+}
+div.world-image > img {
+    width: 300px;
+    height: 300px;
+    align-self: center;
+}
+
+div.world-text {
+    text-align: left;
+    overflow-wrap: normal;
+}
+
+
 footer {
     background-color: #00AA00;
 }

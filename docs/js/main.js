@@ -62,9 +62,9 @@ $.get( ('/BBH_Demo/docs/world_image_list.txt') , function(data) {
 
 // Start the html section with the starter container div
 // Loop through each image
-for(var i = 0, len = ($image_array.length); i < len; i++) {
+for(var j = 0, len = ($image_array.length); j < len; j++) {
 //$image_array.forEach( function($curr_url){
-    $curr_image = $image_array[i]
+    $curr_image = $image_array[j]
     $curr_text = $curr_image.split(".")[0] + ".txt"
     console.log("Current text: "+$curr_text+" Current pic:"+$curr_image);
     // if the image # is even, pic is on the left and text is on the right
@@ -76,23 +76,24 @@ for(var i = 0, len = ($image_array.length); i < len; i++) {
     //     //create html divs to hold the text and the image
     //     $html_string = $html_string + imageDiv($curr_url, $curr_text, false);
     // }
-    $image_html = "<div>";
+    $image_html = "<div class='image_block'>";
     $text = "";
     try {
         $.get( ('/BBH_Demo/docs/world_images/'+$curr_text) , function(data) {
             $text = data;
+            if( i % 2 == 0 ){
+                $image_html += '<div class=world_image><img src="/BBH_Demo/images/world_images/'+$curr_image+'"></div>';
+                $image_html += '<div class="image_text">'+$text+'</div>';
+            } else {
+                $image_html += '<div class="image_text">'+$text+'</div>';
+                $image_html += '<div class=world_image><img src="/BBH_Demo/images/world_images/'+$curr_image+'"></div>';
+            }
+            $html_string = $image_html + "</div>";
          }, 'text');
     } catch {
-        $text = ""
+        $image_html += '<div class=world_image><img src="/BBH_Demo/images/world_images/'+$curr_image+'"></div>';
+        $html_string = $image_html + "</div>";
     }    
-    if( i % 2 == 0 ){
-        $image_html += '<div class=world_image><img src="/BBH_Demo/images/world_images/'+$curr_image+'"></div>';
-        $image_html += '<div class="image_text">'+$text+'</div>';
-    } else {
-        $image_html += '<div class="image_text">'+$text+'</div>';
-        $image_html += '<div class=world_image><img src="/BBH_Demo/images/world_images/'+$curr_image+'"></div>';
-    }
-    $html_string += "</div>";
 }//)
 // end the html section with a </div>
 $html_string = $html_string + "</div>"
