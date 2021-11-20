@@ -76,29 +76,31 @@ for(var j = 0, len = ($image_array.length); j < len; j++) {
     //     //create html divs to hold the text and the image
     //     $html_string = $html_string + imageDiv($curr_url, $curr_text, false);
     // }
-    $image_html = "<div class='image_block'>";
+    $image_html = "<div class='image-block'>";
     $text = "";
-    try {
-        $.get( ('/BBH_Demo/docs/world_images/'+$curr_text) , function(data) {
-            $text = data;
+    var $curr_html = $("#main_content").html( );
+    $.ajax({ type: "GET",   
+        url: '/BBH_Demo/docs/world_images/'+$curr_text,   
+        async: false,
+        success : function(text)
+        {
             if( i % 2 == 0 ){
-                $image_html += '<div class=world_image><img src="/BBH_Demo/images/world_images/'+$curr_image+'"></div>';
-                $image_html += '<div class="image_text">'+$text+'</div>';
+                $image_html += '<div class=world-image><img src="/BBH_Demo/images/world_images/'+$curr_image+'"></div>';
+                $image_html += '<div class="image-text">'+$text+'</div>';
             } else {
-                $image_html += '<div class="image_text">'+$text+'</div>';
-                $image_html += '<div class=world_image><img src="/BBH_Demo/images/world_images/'+$curr_image+'"></div>';
+                $image_html += '<div class="image-text">'+$text+'</div>';
+                $image_html += '<div class=world-image><img src="/BBH_Demo/images/world_images/'+$curr_image+'"></div>';
             }
             $html_string = $image_html + "</div>";
             $image_html += "</div>";
-            var $curr_html = $("#main_content").html( );
             $("#main_content").html( $curr_html + $html_string );
-         }, 'text');
-    } catch {
-        $image_html += '<div class=world_image><img src="/BBH_Demo/images/world_images/'+$curr_image+'"></div>';
-        $image_html += "</div>";
-        var $curr_html = $("#main_content").html( );
-        $("#main_content").html( $curr_html + $html_string );
-    }    
+        },
+        error: function {
+            $image_html += '<div class=world-image><img src="/BBH_Demo/images/world_images/'+$curr_image+'"></div>';
+            $image_html += "</div>";
+            $("#main_content").html( $curr_html + $html_string );
+        }
+    });
 }//)
 // // end the html section with a </div>
 // $html_string = $html_string + "</div>"
